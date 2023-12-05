@@ -4,6 +4,7 @@ import LoadingIcon from '../LoadingIcon.vue';
 import MoreDetails from '../MoreDetails.vue';
 import useMovie from '../../composables/useMovie';
 import useDate from '../../composables/useDate';
+import MoviePersonSinleBack from '../MoviePersonSinleBack.vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
@@ -31,6 +32,8 @@ onMounted(() => {
       'background-image': `url(https://image.tmdb.org/t/p/w1280/${movie.poster_path})`,
     }"
   >
+    <MoviePersonSinleBack url="movies" />
+
     <div class="movie-info relative z-20 max-w-screen-xl w-screen m-auto p-10">
       <div class="grid grid-cols-4 gap-5">
         <img

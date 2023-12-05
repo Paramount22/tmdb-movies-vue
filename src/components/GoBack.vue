@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router';
 const emit = defineEmits(['go-back']);
 </script>
 

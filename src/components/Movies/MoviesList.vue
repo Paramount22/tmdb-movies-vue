@@ -12,8 +12,6 @@ import MoviesCategoryTitle from '../Movies/MoviesCategoryTitle.vue';
 
 const props = defineProps({ movies: Array });
 
-//const showBack = ref(false);
-
 const {
   fetchAllMovies,
   fetchMorePopularMovies,
@@ -27,12 +25,6 @@ const {
 } = useMovie();
 
 const { selected, showBack, message, goBack } = useGoBack();
-
-/* const goBack = () => {
-  fetchAllMovies();
-  selected.value = 'popular';
-  showBack.value = false;
-}; */
 
 onMounted(() => {
   fetchAllMovies();

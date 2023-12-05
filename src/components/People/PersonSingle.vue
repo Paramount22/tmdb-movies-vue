@@ -4,8 +4,9 @@ import { useRoute } from 'vue-router';
 import usePeople from '../../composables/usePeople';
 import useDate from '../../composables/useDate';
 import MoreDetails from '../MoreDetails.vue';
-
+import MoviePersonSinleBack from '../MoviePersonSinleBack.vue';
 import LoadingIcon from '../../components/LoadingIcon.vue';
+
 const route = useRoute();
 
 const { person, isLoading, fetchSinglePerson } = usePeople();
@@ -22,6 +23,8 @@ onMounted(() => {
       'background-image': `url(https://image.tmdb.org/t/p/w1280/${person.profile_path})`,
     }"
   >
+    <MoviePersonSinleBack url="people" />
+
     <div class="movie-info relative z-20 max-w-screen-xl w-screen m-auto p-10">
       <div class="grid grid-cols-4 gap-5">
         <img
